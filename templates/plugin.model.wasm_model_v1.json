@@ -1,0 +1,29 @@
+{
+  "id": "acme.model_provider",
+  "name": "Acme Model Provider",
+  "version": "1.0.0",
+  "api_version": "1.0.0",
+  "description": "Example model provider plugin",
+  "homepage": "https://github.com/acme/acme-model-provider",
+  "capabilities": ["model_provider"],
+  "experimental": false,
+  "min_core_version": "0.1.0",
+  "max_core_version": null,
+  "runtime": "wasm_model_v1",
+  "provider_name": "acme",
+  "model_name": "acme-model-small",
+  "entrypoint": "acme_model_provider.wasm",
+  "entrypoint_sha256": "<sha256-of-payload/acme_model_provider.wasm>",
+  "publisher": "acme",
+  "capability_scopes": {
+    "fs_read_paths": [],
+    "network_allow_hosts": ["api.acme.ai"]
+  },
+  "operational_controls": {
+    "timeout_ms": 10000,
+    "max_retries": 0,
+    "max_calls_per_minute": 120,
+    "circuit_breaker_failures": 3,
+    "circuit_breaker_cooldown_ms": 30000
+  }
+}

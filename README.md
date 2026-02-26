@@ -1,19 +1,38 @@
 # kelvinclaw-plugins
 
-Prebuilt, signed plugin packages for KelvinClaw.
+Distribution repository for prebuilt, signed KelvinClaw plugin packages.
 
-## Index
+This repo is intentionally focused on publish/install artifacts:
 
-- `index.json` (schema `v1`)
+- `index.json` (plugin index, schema `v1`)
+- `packages/<plugin_id>/<version>/<plugin_id>-<version>.tar.gz`
+- `trusted_publishers.kelvin.json` (publisher trust policy)
 
-## Published artifacts
+## For Plugin Developers
 
-- `packages/kelvin.cli/0.1.0/kelvin.cli-0.1.0.tar.gz`
-- `packages/kelvin.openai/0.1.0/kelvin.openai-0.1.0.tar.gz`
-- `trusted_publishers.kelvin.json`
+Use this guide first:
 
-These artifacts are consumed by the KelvinClaw installer scripts:
+- [docs/PLUGIN_AUTHOR_GUIDE.md](docs/PLUGIN_AUTHOR_GUIDE.md)
+
+Templates:
+
+- [templates/plugin.tool.wasm_tool_v1.json](templates/plugin.tool.wasm_tool_v1.json)
+- [templates/plugin.model.wasm_model_v1.json](templates/plugin.model.wasm_model_v1.json)
+- [templates/index.entry.v1.json](templates/index.entry.v1.json)
+
+## KelvinClaw References
+
+This repo does not duplicate SDK/runtime specification docs. Canonical references:
+
+- [KelvinClaw: Plugin Install Flow](https://github.com/TheKelvinProject/kelvinclaw/blob/main/docs/PLUGIN_INSTALL_FLOW.md)
+- [KelvinClaw: Model Plugin ABI](https://github.com/TheKelvinProject/kelvinclaw/blob/main/docs/model-plugin-abi.md)
+- [KelvinClaw: Plugin Index Schema](https://github.com/TheKelvinProject/kelvinclaw/blob/main/docs/plugin-index-schema.md)
+- [KelvinClaw: Trusted Executive + WASM](https://github.com/TheKelvinProject/kelvinclaw/blob/main/docs/trusted-executive-wasm.md)
+
+## Installers That Consume This Repo
 
 - `scripts/install-kelvin-cli-plugin.sh`
 - `scripts/install-kelvin-openai-plugin.sh`
 - `scripts/plugin-index-install.sh`
+
+All are in the KelvinClaw repository.
