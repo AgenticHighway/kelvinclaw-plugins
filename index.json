@@ -1,0 +1,19 @@
+{
+  "schema_version": "v1",
+  "plugins": [
+    {
+      "id": "kelvin.cli",
+      "version": "0.1.0",
+      "package_url": "https://raw.githubusercontent.com/TheKelvinProject/kelvinclaw-plugins/main/packages/kelvin.cli/0.1.0/kelvin.cli-0.1.0.tar.gz",
+      "sha256": "089b3be7f58958c85fd0fd0c6e18740c89a58919c66678fdff2c478441d8e659",
+      "trust_policy_url": "https://raw.githubusercontent.com/TheKelvinProject/kelvinclaw-plugins/main/trusted_publishers.kelvin.json"
+    },
+    {
+      "id": "kelvin.openai",
+      "version": "0.1.0",
+      "package_url": "https://raw.githubusercontent.com/TheKelvinProject/kelvinclaw-plugins/main/packages/kelvin.openai/0.1.0/kelvin.openai-0.1.0.tar.gz",
+      "sha256": "1fa7159345296338aa59a96166fb103a679ca8b92b0d1cae521ff6aa6660c37c",
+      "trust_policy_url": "https://raw.githubusercontent.com/TheKelvinProject/kelvinclaw-plugins/main/trusted_publishers.kelvin.json"
+    }
+  ]
+}
