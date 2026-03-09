@@ -24,10 +24,10 @@ Templates:
 
 This repo does not duplicate SDK/runtime specification docs. Canonical references:
 
-- [KelvinClaw: Plugin Install Flow](https://github.com/TheKelvinProject/kelvinclaw/blob/main/docs/PLUGIN_INSTALL_FLOW.md)
-- [KelvinClaw: Model Plugin ABI](https://github.com/TheKelvinProject/kelvinclaw/blob/main/docs/model-plugin-abi.md)
-- [KelvinClaw: Plugin Index Schema](https://github.com/TheKelvinProject/kelvinclaw/blob/main/docs/plugin-index-schema.md)
-- [KelvinClaw: Trusted Executive + WASM](https://github.com/TheKelvinProject/kelvinclaw/blob/main/docs/trusted-executive-wasm.md)
+- [KelvinClaw: Plugin Install Flow](https://github.com/agentichighway/kelvinclaw/blob/main/docs/PLUGIN_INSTALL_FLOW.md)
+- [KelvinClaw: Model Plugin ABI](https://github.com/agentichighway/kelvinclaw/blob/main/docs/model-plugin-abi.md)
+- [KelvinClaw: Plugin Index Schema](https://github.com/agentichighway/kelvinclaw/blob/main/docs/plugin-index-schema.md)
+- [KelvinClaw: Trusted Executive + WASM](https://github.com/agentichighway/kelvinclaw/blob/main/docs/trusted-executive-wasm.md)
 
 ## Installers That Consume This Repo
 

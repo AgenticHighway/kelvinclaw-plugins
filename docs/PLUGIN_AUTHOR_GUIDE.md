@@ -11,7 +11,7 @@ Use `kelvinclaw` repo for SDK/runtime implementation and verification tooling.
 ## Prerequisites
 
 1. A Rust/WASM plugin project that builds to a `.wasm` file.
-2. A clone of `TheKelvinProject/kelvinclaw` (for signing/install scripts).
+2. A clone of `agentichighway/kelvinclaw` (for signing/install scripts).
 3. Ed25519 keypair for plugin signing.
 
 ## Choose Runtime Type
@@ -21,8 +21,8 @@ Use `kelvinclaw` repo for SDK/runtime implementation and verification tooling.
 
 Canonical runtime/capability rules:
 
-- https://github.com/TheKelvinProject/kelvinclaw/blob/main/docs/PLUGIN_INSTALL_FLOW.md
-- https://github.com/TheKelvinProject/kelvinclaw/blob/main/docs/model-plugin-abi.md
+- https://github.com/agentichighway/kelvinclaw/blob/main/docs/PLUGIN_INSTALL_FLOW.md
+- https://github.com/agentichighway/kelvinclaw/blob/main/docs/model-plugin-abi.md
 
 ## Package Layout
 
