@@ -25,6 +25,10 @@ Use this guide first:
 - [docs/PLUGIN_AUTHOR_GUIDE.md](docs/PLUGIN_AUTHOR_GUIDE.md)
 - [docs/LOCAL_SIGNING_AND_PUBLISHING.md](docs/LOCAL_SIGNING_AND_PUBLISHING.md)
 
+AgenticHighway first-party releases now target AWS KMS-backed Ed25519 signing via
+the private `ah-infra` repo and local `AWS_PROFILE=ah-willsarg-iam` operations.
+Community publishers can continue using local PEM signing.
+
 Templates:
 
 - [templates/plugin.tool.wasm_tool_v1.json](templates/plugin.tool.wasm_tool_v1.json)

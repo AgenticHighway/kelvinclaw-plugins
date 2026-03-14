@@ -16,8 +16,10 @@ For the current manual signing flow used by this repo, see:
 
 1. A Rust/WASM plugin project that builds to a `.wasm` file.
 2. A clone of `agentichighway/kelvinclaw` (for signing/install scripts).
-3. Ed25519 keypair for plugin signing.
-4. `openssl`, `jq`, and `tar`.
+3. For AgenticHighway first-party publishing: AWS CLI access to the private
+   `ah-infra` KMS keys with `AWS_PROFILE=ah-willsarg-iam`.
+4. For community publishing: an Ed25519 keypair for plugin signing.
+5. `openssl`, `jq`, and `tar`.
 
 ## Choose Runtime Type
 
@@ -76,6 +78,18 @@ Use the KelvinClaw signing script:
 
 ```bash
 cd /path/to/kelvinclaw
+AWS_PROFILE=ah-willsarg-iam scripts/plugin-sign.sh \
+  --manifest /tmp/my-plugin/plugin.json \
+  --kms-key-id alias/ah/kelvin/plugins/prod \
+  --kms-region us-east-1 \
+  --publisher-id kelvin_firstparty_aws_v1 \
+  --trust-policy-out /tmp/kelvin_firstparty_aws_v1.trust.json
+```
+
+Community publishers can continue using local PEM signing:
+
+```bash
+cd /path/to/kelvinclaw
 scripts/plugin-sign.sh \
   --manifest /tmp/my-plugin/plugin.json \
   --private-key /path/to/your-ed25519-private.pem \
@@ -86,7 +100,9 @@ scripts/plugin-sign.sh \
 This generates `plugin.sig` for distribution and a trust-policy snippet.
 
 Do not commit private keys into either repository. Commit only the matching
-public key in `trusted_publishers.kelvin.json`.
+public key in `trusted_publishers.kelvin.json`. For AgenticHighway first-party
+releases, the public key should be exported from KMS, not derived from an
+ad-hoc local private key.
 
 ## Create Distribution Tarball
 
