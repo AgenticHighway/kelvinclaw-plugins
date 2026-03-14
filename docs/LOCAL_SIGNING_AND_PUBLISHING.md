@@ -84,7 +84,8 @@ payload/
 Create the tarball:
 
 ```bash
-tar -czf your.plugin.id-1.0.0.tar.gz -C /tmp/plugin-staging plugin.json payload plugin.sig
+COPYFILE_DISABLE=1 COPY_EXTENDED_ATTRIBUTES_DISABLE=1 \
+  tar -czf your.plugin.id-1.0.0.tar.gz -C /tmp/plugin-staging plugin.json payload plugin.sig
 shasum -a 256 your.plugin.id-1.0.0.tar.gz
 ```
 
