@@ -1,26 +1,33 @@
 {
-  "id": "acme.model_provider",
+  "id": "acme.openai",
   "name": "Acme Model Provider",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "api_version": "1.0.0",
-  "description": "Example model provider plugin",
-  "homepage": "https://github.com/acme/acme-model-provider",
-  "capabilities": ["model_provider"],
+  "description": "Example Kelvin model provider plugin",
+  "homepage": "https://example.com/acme-openai",
+  "capabilities": [
+    "model_provider",
+    "network_egress"
+  ],
   "experimental": false,
   "min_core_version": "0.1.0",
   "max_core_version": null,
   "runtime": "wasm_model_v1",
-  "provider_name": "acme",
-  "model_name": "acme-model-small",
-  "entrypoint": "acme_model_provider.wasm",
-  "entrypoint_sha256": "<sha256-of-payload/acme_model_provider.wasm>",
+  "provider_name": "openai",
+  "provider_profile": "openai.responses",
+  "model_name": "gpt-4.1-mini",
+  "entrypoint": "plugin.wasm",
+  "entrypoint_sha256": null,
   "publisher": "acme",
+  "quality_tier": "signed_trusted",
   "capability_scopes": {
     "fs_read_paths": [],
-    "network_allow_hosts": ["api.acme.ai"]
+    "network_allow_hosts": [
+      "api.openai.com"
+    ]
   },
   "operational_controls": {
-    "timeout_ms": 10000,
+    "timeout_ms": 5000,
     "max_retries": 0,
     "max_calls_per_minute": 120,
     "circuit_breaker_failures": 3,

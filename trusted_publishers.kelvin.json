@@ -8,6 +8,10 @@
     {
       "id": "kelvin_openai",
       "ed25519_public_key": "fCkMIqSzlMxjCRKDXYtNiowf8ZUmapz3GfTCDe7sxeY="
+    },
+    {
+      "id": "kelvin_firstparty_v1",
+      "ed25519_public_key": "bPsN2p4/qmCeJxLXZ7Ypw2x0i6k4N4YSuOjV8knHZqo="
     }
   ]
 }

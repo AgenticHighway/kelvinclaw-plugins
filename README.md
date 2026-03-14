@@ -2,17 +2,28 @@
 
 Distribution repository for prebuilt, signed KelvinClaw plugin packages.
 
-This repo is intentionally focused on publish/install artifacts:
+This repo is intentionally focused on publish/install artifacts, not plugin source code:
 
 - `index.json` (plugin index, schema `v1`)
 - `packages/<plugin_id>/<version>/<plugin_id>-<version>.tar.gz`
 - `trusted_publishers.kelvin.json` (publisher trust policy)
+
+Currently published first-party packages:
+
+- `kelvin.cli`
+- `kelvin.openai`
+
+Upstream plugin ids that are documented in the main repo but not yet published here:
+
+- `kelvin.anthropic`
+- `kelvin.browser.automation`
 
 ## For Plugin Developers
 
 Use this guide first:
 
 - [docs/PLUGIN_AUTHOR_GUIDE.md](docs/PLUGIN_AUTHOR_GUIDE.md)
+- [docs/LOCAL_SIGNING_AND_PUBLISHING.md](docs/LOCAL_SIGNING_AND_PUBLISHING.md)
 
 Templates:
 
@@ -33,6 +44,8 @@ This repo does not duplicate SDK/runtime specification docs. Canonical reference
 
 - `scripts/install-kelvin-cli-plugin.sh`
 - `scripts/install-kelvin-openai-plugin.sh`
+- `scripts/install-kelvin-anthropic-plugin.sh`
+- `scripts/install-kelvin-browser-plugin.sh`
 - `scripts/plugin-index-install.sh`
 
 All are in the KelvinClaw repository.

@@ -8,16 +8,27 @@ without duplicating runtime/spec details from the main KelvinClaw repository.
 Use this repo to publish installable plugin artifacts.
 Use `kelvinclaw` repo for SDK/runtime implementation and verification tooling.
 
+For the current manual signing flow used by this repo, see:
+
+- [docs/LOCAL_SIGNING_AND_PUBLISHING.md](LOCAL_SIGNING_AND_PUBLISHING.md)
+
 ## Prerequisites
 
 1. A Rust/WASM plugin project that builds to a `.wasm` file.
 2. A clone of `agentichighway/kelvinclaw` (for signing/install scripts).
 3. Ed25519 keypair for plugin signing.
+4. `openssl`, `jq`, and `tar`.
 
 ## Choose Runtime Type
 
 1. `wasm_tool_v1` for tool plugins.
 2. `wasm_model_v1` for model provider plugins.
+
+For new model plugins, prefer host-routed manifests:
+
+- declare `provider_profile` such as `openai.responses` or `anthropic.messages`
+- include `network_egress` when the plugin intentionally relies on outbound model transport
+- keep `network_allow_hosts` explicit and minimal
 
 Canonical runtime/capability rules:
 
@@ -39,6 +50,9 @@ payload/
 
 - `templates/plugin.tool.wasm_tool_v1.json`
 - `templates/plugin.model.wasm_model_v1.json`
+
+Current templates also include recommended `quality_tier` defaults and model
+`provider_profile` usage.
 
 ## Build and Assemble
 
@@ -71,6 +85,9 @@ scripts/plugin-sign.sh \
 
 This generates `plugin.sig` for distribution and a trust-policy snippet.
 
+Do not commit private keys into either repository. Commit only the matching
+public key in `trusted_publishers.kelvin.json`.
+
 ## Create Distribution Tarball
 
 Use GNU tar format where possible (no platform-specific xattrs):
@@ -89,6 +106,7 @@ Compute package SHA-256 and record it for `index.json`.
 3. Add entry to `index.json` with:
    - `id`, `version`, `package_url`, `sha256`
    - optional `trust_policy_url` (recommended)
+   - optional `quality_tier` and `tags` (recommended)
 
 Index entry template:
 
@@ -111,6 +129,10 @@ Recommended checks:
 1. Install succeeds with SHA verification.
 2. Runtime admission succeeds (signature + capability checks).
 3. Plugin behavior matches declared capability scopes and fails closed.
+
+If you lose a signing key, do not overwrite an old publisher entry in place for
+already-published artifacts. Use a new publisher id for new releases and append
+its public key to the trust policy.
 
 ## Security Checklist
 
