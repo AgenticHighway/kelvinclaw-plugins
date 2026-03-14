@@ -43,7 +43,7 @@ jobs:
       PUBLISHER_ID: kelvin_firstparty_aws_v1
     steps:
       - name: Checkout
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+        uses: useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b
         with:
           fetch-depth: 0
           persist-credentials: false
