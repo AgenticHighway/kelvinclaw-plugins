@@ -1,0 +1,78 @@
+name: Publish First-Party Package
+
+on:
+  workflow_dispatch:
+    inputs:
+      plugin_id:
+        description: Plugin id to refresh and publish
+        required: true
+        type: choice
+        default: kelvin.cli
+        options:
+          - kelvin.cli
+          - kelvin.openai
+      version:
+        description: Version to refresh
+        required: true
+        type: string
+        default: 0.1.1
+      push_changes:
+        description: Commit and push the refreshed package metadata back to the selected branch
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  id-token: write
+
+concurrency:
+  group: publish-${{ inputs.plugin_id }}-${{ inputs.version }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Publish ${{ inputs.plugin_id }}@${{ inputs.version }}
+    runs-on: blacksmith-2vcpu-ubuntu-2404
+    timeout-minutes: 20
+    env:
+      AWS_REGION: us-east-1
+      AWS_ROLE_ARN: arn:aws:iam::REDACTED_ACCOUNT_ID:role/REDACTED_ROLE_NAME
+      KMS_KEY_ID: REDACTED_KMS_ALIAS
+      PUBLISHER_ID: kelvin_firstparty_aws_v1
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ env.AWS_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Refresh package signature and index metadata
+        run: |
+          scripts/refresh-first-party-package.sh \
+            --plugin-id "${{ inputs.plugin_id }}" \
+            --version "${{ inputs.version }}" \
+            --kms-key-id "${KMS_KEY_ID}" \
+            --kms-region "${AWS_REGION}" \
+            --publisher-id "${PUBLISHER_ID}"
+
+      - name: Validate refreshed repository state
+        run: scripts/validate-repository.sh --plugin-id "${{ inputs.plugin_id }}" --version "${{ inputs.version }}"
+
+      - name: Commit and push changes
+        if: ${{ inputs.push_changes }}
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.json trusted_publishers.kelvin.json "packages/${{ inputs.plugin_id }}/${{ inputs.version }}/${{ inputs.plugin_id }}-${{ inputs.version }}.tar.gz"
+          git commit -m "Refresh ${{ inputs.plugin_id }}@${{ inputs.version }} with KMS signature"
+          git push

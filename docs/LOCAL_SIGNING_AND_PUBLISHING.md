@@ -4,6 +4,15 @@ AgenticHighway first-party plugin releases should use AWS KMS-backed Ed25519
 signing. The public release artifacts stay in this repo, while AWS resources are
 managed from the private `REDACTED_INTERNAL_REPO` repo.
 
+The preferred release path is the GitHub Actions workflow in this repo:
+
+- `.github/workflows/publish-first-party-package.yml`
+
+That workflow uses GitHub OIDC plus the AWS role
+`arn:aws:iam::REDACTED_ACCOUNT_ID:role/REDACTED_ROLE_NAME` on a Blacksmith
+runner. The local CLI flow below remains the manual fallback and the path used
+for ad hoc recovery.
+
 ## Rules
 
 1. Keep private keys off-repo.
@@ -92,6 +101,12 @@ shasum -a 256 your.plugin.id-1.0.0.tar.gz
    - recommended: `trust_policy_url`, `quality_tier`, `tags`
 
 ## Validate
+
+Offline repository validation:
+
+```bash
+scripts/validate-repository.sh
+```
 
 From a local KelvinClaw clone:
 

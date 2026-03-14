@@ -17,7 +17,9 @@ For the current manual signing flow used by this repo, see:
 1. A Rust/WASM plugin project that builds to a `.wasm` file.
 2. A clone of `agentichighway/kelvinclaw` (for signing/install scripts).
 3. For AgenticHighway first-party publishing: AWS CLI access to the private
-   `REDACTED_INTERNAL_REPO` KMS keys with `AWS_PROFILE=REDACTED_AWS_PROFILE`.
+   `REDACTED_INTERNAL_REPO` KMS keys. The default path is this repo's GitHub Actions OIDC
+   workflow on Blacksmith; `AWS_PROFILE=REDACTED_AWS_PROFILE` remains the local
+   fallback.
 4. For community publishing: an Ed25519 keypair for plugin signing.
 5. `openssl`, `jq`, and `tar`.
 
