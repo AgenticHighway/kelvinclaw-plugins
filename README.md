@@ -26,8 +26,16 @@ Use this guide first:
 - [docs/LOCAL_SIGNING_AND_PUBLISHING.md](docs/LOCAL_SIGNING_AND_PUBLISHING.md)
 
 AgenticHighway first-party releases now target AWS KMS-backed Ed25519 signing via
-the private `ah-infra` repo and local `AWS_PROFILE=ah-willsarg-iam` operations.
-Community publishers can continue using local PEM signing.
+the private `ah-infra` repo. The default release path is GitHub Actions OIDC on
+Blacksmith runners, with local `AWS_PROFILE=ah-willsarg-iam` signing kept as the
+manual fallback. Community publishers can continue using local PEM signing.
+
+Repo automation:
+
+- `.github/workflows/validate-repository.yml`
+- `.github/workflows/publish-first-party-package.yml`
+- `scripts/validate-repository.sh`
+- `scripts/refresh-first-party-package.sh`
 
 Templates:
 
