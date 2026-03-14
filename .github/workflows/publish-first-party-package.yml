@@ -17,7 +17,7 @@ on:
         type: string
         default: 0.1.1
       push_changes:
-        description: Commit and push the refreshed package metadata back to the selected branch
+        description: Commit the refreshed package metadata to an automation branch and open a pull request
         required: true
         type: boolean
         default: false
@@ -25,6 +25,7 @@ on:
 permissions:
   contents: write
   id-token: write
+  pull-requests: write
 
 concurrency:
   group: publish-${{ inputs.plugin_id }}-${{ inputs.version }}-${{ github.ref }}
@@ -42,12 +43,13 @@ jobs:
       PUBLISHER_ID: kelvin_firstparty_aws_v1
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@ff717079ee2060e4bcee96c4779b553acc87447c
         with:
           role-to-assume: ${{ env.AWS_ROLE_ARN }}
           aws-region: ${{ env.AWS_REGION }}
@@ -64,15 +66,25 @@ jobs:
       - name: Validate refreshed repository state
         run: scripts/validate-repository.sh --plugin-id "${{ inputs.plugin_id }}" --version "${{ inputs.version }}"
 
-      - name: Commit and push changes
+      - name: Commit changes and open pull request
         if: ${{ inputs.push_changes }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           if git diff --quiet; then
             echo "No changes to commit."
             exit 0
           fi
+          branch="automation/publish-${{ inputs.plugin_id }}-${{ inputs.version }}-${{ github.run_id }}"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git checkout -b "${branch}"
           git add index.json trusted_publishers.kelvin.json "packages/${{ inputs.plugin_id }}/${{ inputs.version }}/${{ inputs.plugin_id }}-${{ inputs.version }}.tar.gz"
           git commit -m "Refresh ${{ inputs.plugin_id }}@${{ inputs.version }} with KMS signature"
-          git push
+          git push --set-upstream origin "${branch}"
+          gh pr create \
+            --base main \
+            --head "${branch}" \
+            --title "Refresh ${{ inputs.plugin_id }}@${{ inputs.version }} with KMS signature" \
+            --body "Automated first-party package refresh from workflow run ${{ github.run_id }}."
