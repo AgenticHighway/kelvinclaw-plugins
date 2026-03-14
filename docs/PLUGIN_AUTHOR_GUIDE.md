@@ -111,7 +111,8 @@ ad-hoc local private key.
 Use GNU tar format where possible (no platform-specific xattrs):
 
 ```bash
-tar -czf your.plugin.id-1.0.0.tar.gz -C /tmp/my-plugin plugin.json payload plugin.sig
+COPYFILE_DISABLE=1 COPY_EXTENDED_ATTRIBUTES_DISABLE=1 \
+  tar -czf your.plugin.id-1.0.0.tar.gz -C /tmp/my-plugin plugin.json payload plugin.sig
 ```
 
 Compute package SHA-256 and record it for `index.json`.
