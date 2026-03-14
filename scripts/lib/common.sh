@@ -23,8 +23,14 @@ create_tar_gz() {
   if tar --help 2>/dev/null | grep -q -- '--sort='; then
     tar_args=(--sort=name --mtime='UTC 1970-01-01' --owner=0 --group=0 --numeric-owner "${tar_args[@]}")
   fi
-  if tar --help 2>/dev/null | grep -q -- '--pax-option'; then
-    tar_args=(--pax-option=delete=atime,delete=ctime "${tar_args[@]}")
+  if tar --help 2>/dev/null | grep -q -- '--no-xattrs'; then
+    tar_args=(--no-xattrs "${tar_args[@]}")
+  fi
+  if tar --help 2>/dev/null | grep -q -- '--no-acls'; then
+    tar_args=(--no-acls "${tar_args[@]}")
+  fi
+  if tar --help 2>/dev/null | grep -q -- '--no-selinux'; then
+    tar_args=(--no-selinux "${tar_args[@]}")
   fi
 
   stage_dir="$(mktemp -d)"
