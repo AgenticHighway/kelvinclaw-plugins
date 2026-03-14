@@ -207,7 +207,7 @@ if ! verify_manifest_signature "${MANIFEST_PATH}" "${SIGNATURE_PATH}" "${PUB_RAW
 fi
 
 rm -f "${PACKAGE_PATH}"
-tar -czf "${PACKAGE_PATH}" -C "${EXTRACT_DIR}" plugin.json payload plugin.sig
+create_tar_gz "${PACKAGE_PATH}" "${EXTRACT_DIR}" plugin.json payload plugin.sig
 package_sha256="$(sha256_file "${PACKAGE_PATH}")"
 tags_json="$(default_tags_json "${PLUGIN_ID}")"
 
