@@ -6,7 +6,8 @@ without duplicating runtime/spec details from the main KelvinClaw repository.
 ## Scope
 
 Use this repo to publish installable plugin artifacts.
-Use `kelvinclaw` repo for SDK/runtime implementation and verification tooling.
+Use `kelvinclaw` repo for SDK/runtime implementation, working scaffolds, example
+source crates, and local verification tooling.
 
 For the current manual signing flow used by this repo, see:
 
@@ -38,6 +39,7 @@ Canonical runtime/capability rules:
 
 - https://github.com/agentichighway/kelvinclaw/blob/main/docs/PLUGIN_INSTALL_FLOW.md
 - https://github.com/agentichighway/kelvinclaw/blob/main/docs/model-plugin-abi.md
+- https://github.com/agentichighway/kelvinclaw/blob/main/docs/build-a-model-plugin.md
 
 ## Package Layout
 
@@ -164,4 +166,5 @@ its public key to the trust policy.
 ## Notes
 
 This repo is artifact-first, not source-first. Plugin source code can live in
-any repository; this repo is for installable packages and metadata.
+`kelvinclaw` or any other source repository; this repo is only for installable
+packages and metadata.
