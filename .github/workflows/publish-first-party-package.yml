@@ -11,6 +11,8 @@ on:
                 options:
                     - kelvin.cli
                     - kelvin.openai
+                    - kelvin.anthropic
+                    - kelvin.openrouter
             version:
                 description: Version to refresh
                 required: true
