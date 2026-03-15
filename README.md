@@ -11,11 +11,11 @@ This repo is intentionally focused on publish/install artifacts, not plugin sour
 Currently published first-party packages:
 
 - `kelvin.cli`
+- `kelvin.anthropic`
 - `kelvin.openai`
 
 Upstream plugin ids that are documented in the main repo but not yet published here:
 
-- `kelvin.anthropic`
 - `kelvin.browser.automation`
 
 ## For Plugin Developers
@@ -29,6 +29,11 @@ AgenticHighway first-party releases now target AWS KMS-backed Ed25519 signing vi
 the private `ah-infra` repo. The default release path is GitHub Actions OIDC on
 Blacksmith runners, with local `AWS_PROFILE=ah-willsarg-iam` signing kept as the
 manual fallback. Community publishers can continue using local PEM signing.
+
+For local community development, use the public authoring flow in the
+`kelvinclaw` repo first. Unsigned local plugins are supported there and Kelvin
+warns on install instead of blocking them. This repo is only for published
+package artifacts and trust/index metadata.
 
 Repo automation:
 
