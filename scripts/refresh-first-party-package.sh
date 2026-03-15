@@ -106,6 +106,9 @@ default_tags_json() {
     kelvin.cli)
       printf '%s\n' '["first_party","cli"]'
       ;;
+    kelvin.anthropic)
+      printf '%s\n' '["first_party","model","anthropic"]'
+      ;;
     kelvin.openai)
       printf '%s\n' '["first_party","model","openai"]'
       ;;

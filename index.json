@@ -8,7 +8,10 @@
       "sha256": "089b3be7f58958c85fd0fd0c6e18740c89a58919c66678fdff2c478441d8e659",
       "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
       "quality_tier": "signed_trusted",
-      "tags": ["first_party", "cli"]
+      "tags": [
+        "first_party",
+        "cli"
+      ]
     },
     {
       "id": "kelvin.cli",
@@ -17,7 +20,10 @@
       "sha256": "d59a1756ace124a897f2089ac7c788b68a9f673c19dbe0f0ee16611bebc494e3",
       "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
       "quality_tier": "signed_trusted",
-      "tags": ["first_party", "cli"]
+      "tags": [
+        "first_party",
+        "cli"
+      ]
     },
     {
       "id": "kelvin.openai",
@@ -26,7 +32,11 @@
       "sha256": "1fa7159345296338aa59a96166fb103a679ca8b92b0d1cae521ff6aa6660c37c",
       "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
       "quality_tier": "signed_trusted",
-      "tags": ["first_party", "model", "openai"]
+      "tags": [
+        "first_party",
+        "model",
+        "openai"
+      ]
     },
     {
       "id": "kelvin.openai",
@@ -35,7 +45,24 @@
       "sha256": "946ff13cdd1246fc7438d590144a6d771a238cb030d09585cfe511e37bf52317",
       "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
       "quality_tier": "signed_trusted",
-      "tags": ["first_party", "model", "openai"]
+      "tags": [
+        "first_party",
+        "model",
+        "openai"
+      ]
+    },
+    {
+      "id": "kelvin.anthropic",
+      "version": "0.1.0",
+      "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.anthropic/0.1.0/kelvin.anthropic-0.1.0.tar.gz",
+      "sha256": "d488563d4948f4a4ffd27172feb8864bf35b6a5adeec186f19d0131e51960384",
+      "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
+      "quality_tier": "signed_trusted",
+      "tags": [
+        "first_party",
+        "model",
+        "anthropic"
+      ]
     }
   ]
 }
