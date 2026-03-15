@@ -112,6 +112,9 @@ default_tags_json() {
     kelvin.openai)
       printf '%s\n' '["first_party","model","openai"]'
       ;;
+    kelvin.openrouter)
+      printf '%s\n' '["first_party","model","openrouter"]'
+      ;;
     *)
       echo "No default tags are configured for plugin '${1}'." >&2
       exit 1

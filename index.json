@@ -63,6 +63,45 @@
         "model",
         "anthropic"
       ]
+    },
+    {
+      "id": "kelvin.anthropic",
+      "version": "0.1.1",
+      "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.anthropic/0.1.1/kelvin.anthropic-0.1.1.tar.gz",
+      "sha256": "66485e2b981275001675505f7aad3e465c03b032e4e6eba44073f2b0ebf658d3",
+      "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
+      "quality_tier": "signed_trusted",
+      "tags": [
+        "first_party",
+        "model",
+        "anthropic"
+      ]
+    },
+    {
+      "id": "kelvin.openrouter",
+      "version": "0.1.0",
+      "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.openrouter/0.1.0/kelvin.openrouter-0.1.0.tar.gz",
+      "sha256": "6959a64d1fad5dcd4334dc4b3e24aa3dcd11f7c750c70a48cd528c506a516ab1",
+      "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
+      "quality_tier": "signed_trusted",
+      "tags": [
+        "first_party",
+        "model",
+        "openrouter"
+      ]
+    },
+    {
+      "id": "kelvin.openai",
+      "version": "0.1.2",
+      "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.openai/0.1.2/kelvin.openai-0.1.2.tar.gz",
+      "sha256": "7699b4c3fa4684cfa879c4c2e51111a8738c98236934424013b2f35b73216548",
+      "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
+      "quality_tier": "signed_trusted",
+      "tags": [
+        "first_party",
+        "model",
+        "openai"
+      ]
     }
   ]
 }

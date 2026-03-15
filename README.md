@@ -13,6 +13,7 @@ Currently published first-party packages:
 - `kelvin.cli`
 - `kelvin.anthropic`
 - `kelvin.openai`
+- `kelvin.openrouter`
 
 Upstream plugin ids that are documented in the main repo but not yet published here:
 
