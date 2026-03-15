@@ -102,6 +102,18 @@
         "model",
         "openai"
       ]
+    },
+    {
+      "id": "kelvin.cli",
+      "version": "0.1.2",
+      "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.cli/0.1.2/kelvin.cli-0.1.2.tar.gz",
+      "sha256": "9f9a3611b299f76b2deafa21c09abad6d7c96f7486eb7a991a9bbb1dce8c5012",
+      "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
+      "quality_tier": "signed_trusted",
+      "tags": [
+        "first_party",
+        "cli"
+      ]
     }
   ]
 }
