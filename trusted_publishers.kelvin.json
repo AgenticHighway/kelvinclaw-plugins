@@ -12,6 +12,10 @@
     {
       "id": "kelvin_firstparty_aws_v1",
       "ed25519_public_key": "9Zchm4oGPDklwGJEbli5tB2gStihp/BmOfe3xHpkc+Q="
+    },
+    {
+      "id": "kelvin_firstparty_local_v1",
+      "ed25519_public_key": "/l6mxglXEa7r5GBJOSuavCGnbebhDcy6pYvF596zDH8="
     }
   ]
 }
