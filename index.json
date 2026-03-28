@@ -7,13 +7,18 @@
       "version": "0.1.0",
       "description": "Core CLI toolpack providing filesystem, web fetch, cron, and session tools — required by every KelvinClaw installation.",
       "homepage": "https://github.com/agentichighway/kelvinclaw",
-      "capabilities": ["tool_provider"],
+      "capabilities": [
+        "tool_provider"
+      ],
       "runtime": "wasm_tool_v1",
       "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.cli/0.1.0/kelvin.cli-0.1.0.tar.gz",
       "sha256": "089b3be7f58958c85fd0fd0c6e18740c89a58919c66678fdff2c478441d8e659",
       "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
       "quality_tier": "signed_trusted",
-      "tags": ["first_party", "cli"]
+      "tags": [
+        "first_party",
+        "cli"
+      ]
     },
     {
       "id": "kelvin.cli",
@@ -21,13 +26,18 @@
       "version": "0.1.1",
       "description": "Core CLI toolpack providing filesystem, web fetch, cron, and session tools — required by every KelvinClaw installation.",
       "homepage": "https://github.com/agentichighway/kelvinclaw",
-      "capabilities": ["tool_provider"],
+      "capabilities": [
+        "tool_provider"
+      ],
       "runtime": "wasm_tool_v1",
       "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.cli/0.1.1/kelvin.cli-0.1.1.tar.gz",
       "sha256": "d59a1756ace124a897f2089ac7c788b68a9f673c19dbe0f0ee16611bebc494e3",
       "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
       "quality_tier": "signed_trusted",
-      "tags": ["first_party", "cli"]
+      "tags": [
+        "first_party",
+        "cli"
+      ]
     },
     {
       "id": "kelvin.cli",
@@ -35,13 +45,18 @@
       "version": "0.1.2",
       "description": "Core CLI toolpack providing filesystem, web fetch, cron, and session tools — required by every KelvinClaw installation.",
       "homepage": "https://github.com/agentichighway/kelvinclaw",
-      "capabilities": ["tool_provider"],
+      "capabilities": [
+        "tool_provider"
+      ],
       "runtime": "wasm_tool_v1",
       "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.cli/0.1.2/kelvin.cli-0.1.2.tar.gz",
       "sha256": "9f9a3611b299f76b2deafa21c09abad6d7c96f7486eb7a991a9bbb1dce8c5012",
       "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
       "quality_tier": "signed_trusted",
-      "tags": ["first_party", "cli"]
+      "tags": [
+        "first_party",
+        "cli"
+      ]
     },
     {
       "id": "kelvin.openai",
@@ -49,13 +64,20 @@
       "version": "0.1.0",
       "description": "First-party OpenAI model plugin using Kelvin's provider_profile host routing.",
       "homepage": "https://github.com/agentichighway/kelvinclaw/tree/main/plugins/kelvin-openai-plugin",
-      "capabilities": ["model_provider", "network_egress"],
+      "capabilities": [
+        "model_provider",
+        "network_egress"
+      ],
       "runtime": "wasm_model_v1",
       "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.openai/0.1.0/kelvin.openai-0.1.0.tar.gz",
       "sha256": "1fa7159345296338aa59a96166fb103a679ca8b92b0d1cae521ff6aa6660c37c",
       "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
       "quality_tier": "signed_trusted",
-      "tags": ["first_party", "model", "openai"]
+      "tags": [
+        "first_party",
+        "model",
+        "openai"
+      ]
     },
     {
       "id": "kelvin.openai",
@@ -63,13 +85,20 @@
       "version": "0.1.1",
       "description": "First-party OpenAI model plugin using Kelvin's provider_profile host routing.",
       "homepage": "https://github.com/agentichighway/kelvinclaw/tree/main/plugins/kelvin-openai-plugin",
-      "capabilities": ["model_provider", "network_egress"],
+      "capabilities": [
+        "model_provider",
+        "network_egress"
+      ],
       "runtime": "wasm_model_v1",
       "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.openai/0.1.1/kelvin.openai-0.1.1.tar.gz",
       "sha256": "946ff13cdd1246fc7438d590144a6d771a238cb030d09585cfe511e37bf52317",
       "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
       "quality_tier": "signed_trusted",
-      "tags": ["first_party", "model", "openai"]
+      "tags": [
+        "first_party",
+        "model",
+        "openai"
+      ]
     },
     {
       "id": "kelvin.openai",
@@ -77,13 +106,20 @@
       "version": "0.1.2",
       "description": "First-party OpenAI model plugin using Kelvin's provider_profile host routing.",
       "homepage": "https://github.com/agentichighway/kelvinclaw/tree/main/plugins/kelvin-openai-plugin",
-      "capabilities": ["model_provider", "network_egress"],
+      "capabilities": [
+        "model_provider",
+        "network_egress"
+      ],
       "runtime": "wasm_model_v1",
       "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.openai/0.1.2/kelvin.openai-0.1.2.tar.gz",
       "sha256": "7699b4c3fa4684cfa879c4c2e51111a8738c98236934424013b2f35b73216548",
       "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
       "quality_tier": "signed_trusted",
-      "tags": ["first_party", "model", "openai"]
+      "tags": [
+        "first_party",
+        "model",
+        "openai"
+      ]
     },
     {
       "id": "kelvin.openai",
@@ -91,13 +127,20 @@
       "version": "0.2.0",
       "description": "First-party OpenAI model plugin using Kelvin's provider_profile host routing.",
       "homepage": "https://github.com/agentichighway/kelvinclaw/tree/main/plugins/kelvin-openai-plugin",
-      "capabilities": ["model_provider", "network_egress"],
+      "capabilities": [
+        "model_provider",
+        "network_egress"
+      ],
       "runtime": "wasm_model_v1",
       "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.openai/0.2.0/kelvin.openai-0.2.0.tar.gz",
       "sha256": "67f02e25a1a7c668858a3602a824412c5365cc07726e7f23c64015e9f98ef1f7",
       "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
       "quality_tier": "signed_trusted",
-      "tags": ["first_party", "model", "openai"]
+      "tags": [
+        "first_party",
+        "model",
+        "openai"
+      ]
     },
     {
       "id": "kelvin.anthropic",
@@ -105,13 +148,20 @@
       "version": "0.1.0",
       "description": "First-party Anthropic model plugin using Kelvin's provider_profile host routing.",
       "homepage": "https://github.com/agentichighway/kelvinclaw/tree/main/plugins/kelvin-anthropic-plugin",
-      "capabilities": ["model_provider", "network_egress"],
+      "capabilities": [
+        "model_provider",
+        "network_egress"
+      ],
       "runtime": "wasm_model_v1",
       "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.anthropic/0.1.0/kelvin.anthropic-0.1.0.tar.gz",
       "sha256": "d488563d4948f4a4ffd27172feb8864bf35b6a5adeec186f19d0131e51960384",
       "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
       "quality_tier": "signed_trusted",
-      "tags": ["first_party", "model", "anthropic"]
+      "tags": [
+        "first_party",
+        "model",
+        "anthropic"
+      ]
     },
     {
       "id": "kelvin.anthropic",
@@ -119,13 +169,20 @@
       "version": "0.1.1",
       "description": "First-party Anthropic model plugin using Kelvin's provider_profile host routing.",
       "homepage": "https://github.com/agentichighway/kelvinclaw/tree/main/plugins/kelvin-anthropic-plugin",
-      "capabilities": ["model_provider", "network_egress"],
+      "capabilities": [
+        "model_provider",
+        "network_egress"
+      ],
       "runtime": "wasm_model_v1",
       "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.anthropic/0.1.1/kelvin.anthropic-0.1.1.tar.gz",
       "sha256": "66485e2b981275001675505f7aad3e465c03b032e4e6eba44073f2b0ebf658d3",
       "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
       "quality_tier": "signed_trusted",
-      "tags": ["first_party", "model", "anthropic"]
+      "tags": [
+        "first_party",
+        "model",
+        "anthropic"
+      ]
     },
     {
       "id": "kelvin.anthropic",
@@ -133,13 +190,20 @@
       "version": "0.2.0",
       "description": "First-party Anthropic model plugin using Kelvin's provider_profile host routing.",
       "homepage": "https://github.com/agentichighway/kelvinclaw/tree/main/plugins/kelvin-anthropic-plugin",
-      "capabilities": ["model_provider", "network_egress"],
+      "capabilities": [
+        "model_provider",
+        "network_egress"
+      ],
       "runtime": "wasm_model_v1",
       "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.anthropic/0.2.0/kelvin.anthropic-0.2.0.tar.gz",
       "sha256": "04cd059747fd5ab815a28e3f0a6587b754e33cc20124fecb777b5494ca9091c0",
       "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
       "quality_tier": "signed_trusted",
-      "tags": ["first_party", "model", "anthropic"]
+      "tags": [
+        "first_party",
+        "model",
+        "anthropic"
+      ]
     },
     {
       "id": "kelvin.openrouter",
@@ -147,13 +211,20 @@
       "version": "0.1.0",
       "description": "First-party OpenRouter model plugin using Kelvin's declarative provider_profile routing.",
       "homepage": "https://github.com/agentichighway/kelvinclaw/tree/main/plugins/kelvin-openrouter-plugin",
-      "capabilities": ["model_provider", "network_egress"],
+      "capabilities": [
+        "model_provider",
+        "network_egress"
+      ],
       "runtime": "wasm_model_v1",
       "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.openrouter/0.1.0/kelvin.openrouter-0.1.0.tar.gz",
       "sha256": "6959a64d1fad5dcd4334dc4b3e24aa3dcd11f7c750c70a48cd528c506a516ab1",
       "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
       "quality_tier": "signed_trusted",
-      "tags": ["first_party", "model", "openrouter"]
+      "tags": [
+        "first_party",
+        "model",
+        "openrouter"
+      ]
     },
     {
       "id": "kelvin.echo",
@@ -161,13 +232,19 @@
       "version": "0.2.0",
       "description": "First-party echo plugin — reflects the user prompt back as the assistant response. No external network calls.",
       "homepage": "https://github.com/agentichighway/kelvinclaw/tree/main/plugins/kelvin-echo-plugin",
-      "capabilities": ["model_provider"],
+      "capabilities": [
+        "model_provider"
+      ],
       "runtime": "wasm_model_v1",
       "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.echo/0.2.0/kelvin.echo-0.2.0.tar.gz",
       "sha256": "cac004675e47faa17dd78f2657e4325a931c045cd62ce722327393a2881455bb",
       "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
       "quality_tier": "signed_trusted",
-      "tags": ["first_party", "model", "echo"]
+      "tags": [
+        "first_party",
+        "model",
+        "echo"
+      ]
     },
     {
       "id": "kelvin.websearch",
@@ -175,13 +252,21 @@
       "version": "0.2.0",
       "description": "Web search powered by the Brave Search API",
       "homepage": "https://github.com/agentichighway/kelvinclaw/tree/main/plugins/kelvin-websearch-plugin",
-      "capabilities": ["tool_provider", "network_egress", "env_access"],
+      "capabilities": [
+        "tool_provider",
+        "network_egress",
+        "env_access"
+      ],
       "runtime": "wasm_tool_v1",
       "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.websearch/0.2.0/kelvin.websearch-0.2.0.tar.gz",
       "sha256": "50437544e38abaf81448f9acde6c0d2305021618086797ae67eed17748b01264",
       "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
       "quality_tier": "signed_trusted",
-      "tags": ["first_party", "tool", "websearch"]
+      "tags": [
+        "first_party",
+        "tool",
+        "websearch"
+      ]
     },
     {
       "id": "kelvin.openrouter",
@@ -189,13 +274,33 @@
       "version": "0.2.0",
       "description": "First-party OpenRouter model plugin using Kelvin's declarative provider_profile routing.",
       "homepage": "https://github.com/agentichighway/kelvinclaw/tree/main/plugins/kelvin-openrouter-plugin",
-      "capabilities": ["model_provider", "network_egress"],
+      "capabilities": [
+        "model_provider",
+        "network_egress"
+      ],
       "runtime": "wasm_model_v1",
       "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.openrouter/0.2.0/kelvin.openrouter-0.2.0.tar.gz",
       "sha256": "52852c5e83759e1ba05cdd2396c9759aa893f96c373ff2d768bbd746d6d9f2a6",
       "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
       "quality_tier": "signed_trusted",
-      "tags": ["first_party", "model", "openrouter"]
+      "tags": [
+        "first_party",
+        "model",
+        "openrouter"
+      ]
+    },
+    {
+      "id": "kelvin.wiki",
+      "version": "0.1.1",
+      "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.wiki/0.1.1/kelvin.wiki-0.1.1.tar.gz",
+      "sha256": "ac43ebe8885017160e2cf2bebda0e660a4c004dc377deb6038516e4341414426",
+      "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
+      "quality_tier": "signed_trusted",
+      "tags": [
+        "first_party",
+        "tool",
+        "wiki"
+      ]
     }
   ]
 }
