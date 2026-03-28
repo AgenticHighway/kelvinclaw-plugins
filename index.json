@@ -164,7 +164,7 @@
       "capabilities": ["model_provider"],
       "runtime": "wasm_model_v1",
       "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.echo/0.2.0/kelvin.echo-0.2.0.tar.gz",
-      "sha256": "9d4f73d99e4595148111895a97a9f24a32e836af7e9cd63b0cea9dcb8b9520fa",
+      "sha256": "cac004675e47faa17dd78f2657e4325a931c045cd62ce722327393a2881455bb",
       "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
       "quality_tier": "signed_trusted",
       "tags": ["first_party", "model", "echo"]
