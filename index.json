@@ -301,6 +301,28 @@
         "tool",
         "wiki"
       ]
+    },
+    {
+      "id": "kelvin.hackernews",
+      "name": "Kelvin HackerNews Monitor",
+      "version": "0.1.0",
+      "description": "Monitor Hacker News for stories matching user-defined keywords, with optional domain filtering. Returns story titles, source URLs, and HN discussion links.",
+      "homepage": "https://github.com/RobertoBootup/kelvinclaw-plugins",
+      "capabilities": [
+        "tool_provider",
+        "network_egress"
+      ],
+      "runtime": "wasm_tool_v1",
+      "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.hackernews/0.1.0/kelvin.hackernews-0.1.0.tar.gz",
+      "sha256": "6477e4fb789b6a94b75ea93047c9ff26056f639a7a0a206c104c83802429b5ee",
+      "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.RobertoBootup.json",
+      "quality_tier": "signed_trusted",
+      "tags": [
+        "tool",
+        "hackernews",
+        "monitor",
+        "news"
+      ]
     }
   ]
 }
