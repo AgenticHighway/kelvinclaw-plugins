@@ -300,6 +300,63 @@
         "first_party",
         "tool",
         "wiki"
+      ],
+      "description": "Fetch pages from the kelvinclaw wiki/docs on GitHub"
+    },
+    {
+      "id": "kelvin.ollama",
+      "version": "0.1.0",
+      "description": "First-party Ollama model plugin for local LLM inference via the OpenAI-compatible API",
+      "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.ollama/0.1.0/kelvin.ollama-0.1.0.tar.gz",
+      "sha256": "2dbd01d72ab4921bdee911a2bbf571c7919482223608bed4ca5b6e7042e622b3",
+      "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
+      "quality_tier": "signed_trusted",
+      "tags": [
+        "model_provider",
+        "ollama",
+        "local"
+      ]
+    },
+    {
+      "id": "kelvin.anthropic",
+      "version": "0.2.1",
+      "description": "First-party Anthropic model plugin using Kelvin's provider_profile host routing.",
+      "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.anthropic/0.2.1/kelvin.anthropic-0.2.1.tar.gz",
+      "sha256": "e9b0408ec24adeee831a45e149510a8fb50496b911146981dea1c7e2ba458d4a",
+      "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
+      "quality_tier": "signed_trusted",
+      "tags": [
+        "first_party",
+        "model",
+        "anthropic"
+      ]
+    },
+    {
+      "id": "kelvin.openai",
+      "version": "0.2.1",
+      "description": "First-party OpenAI model plugin using Kelvin's provider_profile host routing.",
+      "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.openai/0.2.1/kelvin.openai-0.2.1.tar.gz",
+      "sha256": "74c849446d34c79b5acc901d0ac725e6fd2682e9e27c1e42fc654f325b362dca",
+      "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
+      "quality_tier": "signed_trusted",
+      "tags": [
+        "first_party",
+        "model",
+        "openai"
+      ]
+    },
+    {
+      "id": "kelvin.openrouter",
+      "version": "0.2.1",
+      "description": "First-party OpenRouter model plugin using Kelvin's provider_profile host routing.",
+      "package_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/packages/kelvin.openrouter/0.2.1/kelvin.openrouter-0.2.1.tar.gz",
+      "sha256": "d4effd7d881514a83893ab58cdd395cb92ce1f7b46f04c049aca5d839df6c257",
+      "trust_policy_url": "https://raw.githubusercontent.com/agentichighway/kelvinclaw-plugins/main/trusted_publishers.kelvin.json",
+      "quality_tier": "signed_trusted",
+      "tags": [
+        "first_party",
+        "model",
+        "openrouter"
       ]
     }
   ]
