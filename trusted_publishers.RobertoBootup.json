@@ -1,0 +1,9 @@
+{
+  "require_signature": true,
+  "publishers": [
+    {
+      "id": "RobertoBootup",
+      "ed25519_public_key": "XpKYWP2NQ8rUc/QOvHBwzGTJGSKsIxr1JLvx4SsYi8I="
+    }
+  ]
+}
